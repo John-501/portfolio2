@@ -42,157 +42,83 @@ import { Adobephotoshop } from "@styled-icons/simple-icons/Adobephotoshop";
 import { Visualstudiocode } from "@styled-icons/simple-icons/Visualstudiocode";
 import { Trello } from "@styled-icons/boxicons-logos/Trello";
 
-const ContainerTechsSlide = styled.div`
+const ContainerTechs = styled.div`
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	flex-direction: row;
+	//background-color: #ccc;
+	width: 80%;
 
 	svg {
-		color: #ccc;
 		width: 38px;
 		height: 38px;
-	}
-`;
+		color: #4b4b4b;
+		margin: 10px;
+		transition: all 0.3s ease;
 
-const Slider = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background: white;
-	//box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
-	height: 100px;
-	//margin: auto;
-	overflow: hidden;
-	position: relative;
-
-	@keyframes scroll {
-		0% {
-			transform: translateX(0);
-		}
-		100% {
-			transform: translateX(calc(-250px * 7));
+		&:hover {
+			color: ${(props) => props.theme.colors.branding};
 		}
 	}
 
-	&::before,
-	&::after {
-		background: linear-gradient(to right, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0) 100%);
-		content: "";
-		height: 100px;
-		position: absolute;
-		width: 200px;
-		z-index: 2;
-	}
+	.grid {
+		display: grid;
+		//width: auto;
+		grid-template-columns: repeat(8, 1fr);
+		transition: all 0.3s ease;
 
-	&::after {
-		right: 0;
-		top: 0;
-		transform: rotateZ(180deg);
-	}
-
-	&::before {
-		left: 0;
-		top: 0;
-	}
-
-	.slide-track {
-		animation: scroll 3s linear infinite;
-		display: flex;
-		width: calc(250px * 14);
-	}
-
-	.slide {
-		height: 100px;
-		width: 250px;
+		//@media (max-width: 1400px) {
+		//	grid-template-columns: repeat(4, 1fr);
+		//}
 	}
 `;
 
 export default function SlideTechs() {
 	return (
-		<ContainerTechsSlide>
-			<Slider>
-				<div className="slide-track">
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Amazons3 />
-					</div>
-					<div className="slide">
-						<Visualstudiocode />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-					<div className="slide">
-						<Adobephotoshop />
-					</div>
-				</div>
-			</Slider>
-		</ContainerTechsSlide>
+		<ContainerTechs>
+			<div className="grid">
+				<Adobephotoshop />
+				<Amazons3 />
+				<Visualstudiocode />
+				<Adobephotoshop />
+				<Trello />
+				<Oracle />
+				<Amazonaws />
+				<GoogleCloud />
+				<Firebase />
+				<Mongodb />
+				<Postgresql />
+				<Sqlite />
+				<Javascript />
+				<Java />
+				<ReactLogo />
+				<Nextdotjs />
+				<Python />
+				<Flutter />
+				<Django />
+				<Nodejs />
+				<LogoVercel />
+				<Netlify />
+				<Materialui />
+				<Styledcomponents />
+				<Css3 />
+				<Html5 />
+				<Git />
+				<LogoBitbucket />
+				<GithubOutline />
+				<Api />
+				<Bootstrap />
+				<TailwindCss />
+				<Mysql />
+				<Linux />
+				<Windows />
+				<Android />
+				<Ios />
+				<Typescript />
+				<Sass />
+				<Jquery />
+				<Figma />
+			</div>
+		</ContainerTechs>
 	);
 }
-
-/*
-@mixin white-gradient {
-	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
-}
-
-$animationSpeed: 40s;
-
-// Animation
-@keyframes scroll {
-	0% { transform: translateX(0); }
-	100% { transform: translateX(calc(-250px * 7))}
-}
- */
