@@ -7,30 +7,20 @@ import { Robot } from "@styled-icons/fa-solid/Robot";
 import { DesignServices } from "@styled-icons/material-rounded/DesignServices";
 import { DesignIdeas } from "@styled-icons/fluentui-system-filled/DesignIdeas";
 import { CodeBlock } from "@styled-icons/boxicons-regular/CodeBlock";
-import { WindowDevTools } from "@styled-icons/fluentui-system-regular/WindowDevTools";
-
-//Styled-components
-import { TitleH3, TitleSection, ContainerTitleSection } from "@/styles/ui";
 
 const CardService = styled.div`
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: flex-start;
 	flex-direction: column;
-	padding: 20px;
-	border-radius: 4px;
 	width: 275px;
-	height: 340px;
-	background-color: ${(props) => props.theme.colors.backgroundSecondary};
+	//padding: 20px;
+	//border-radius: 4px;
+	//height: 340px;
+	//background-color: ${(props) => props.theme.colors.backgroundSecondary};
 	transition: all 0.3s ease;
 	border: 3px solid transparent;
-	z-index: 1;
-
-	:hover {
-		transform: translateY(-12px);
-		border: 3px solid ${(props) => props.theme.colors.branding};
-		box-shadow: 0px 0px 40px 0px ${(props) => props.theme.colors.branding}5E;
-	}
+	//z-index: 1;
 
 	svg {
 		color: ${(props) => props.theme.colors.branding};
@@ -39,20 +29,31 @@ const CardService = styled.div`
 		margin-bottom: 10px;
 	}
 
-	@media (max-width: 600px) {
-		width: 90%;
+	h3 {
+		color: ${(props) => props.theme.colors.branding};
+		font-size: 20px;
+		font-weight: 900;
+		margin-top: 5px;
+		margin-bottom: 20px;
+
+		@media (max-width: 900px) {
+			font-size: 18px;
+		}
 	}
-`;
 
-const CardText = styled.p`
-	color: ${(props) => props.theme.colors.subtitle};
-	font-size: 16px;
-	//font-weight: 900;
-	text-align: left;
-	margin-top: 30px;
+	p {
+		color: ${(props) => props.theme.colors.subtitle};
+		font-size: 16px;
+		font-weight: 400;
+		text-align: center;
 
-	@media (max-width: 1400px) {
-		font-size: ${(props) => props.theme.fontSizes.lg};
+		@media (max-width: 900px) {
+			font-size: 14px;
+		}
+	}
+
+	@media (max-width: 425px) {
+		width: 90%;
 	}
 `;
 
@@ -77,47 +78,32 @@ const ContainerGrid = styled.div`
 
 export default function ServicesOffer() {
 	return (
-		<>
-			<ContainerTitleSection>
-				<WindowDevTools />
-				<TitleSection>Serviços oferecidos</TitleSection>
-			</ContainerTitleSection>
+		<ScrollAnimation animateIn="fadeIn" animateOnce>
+			<ContainerGrid>
+				<CardService>
+					<Robot />
+					<h3>SEO</h3>
+					<p>Através de técnicas de SEO, irei elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.</p>
+				</CardService>
 
-			<ScrollAnimation animateIn="fadeIn" animateOnce>
-				<ContainerGrid>
-					<CardService>
-						<div>
-							<Robot />
-							<TitleH3>SEO</TitleH3>
-						</div>
-						<CardText>Através de técnicas de SEO, irei elevar a taxa de conversão do seu produto e aumentar sua visibilidade online de forma orgânica, ou seja, sem depender de anúncios para serem bem sucedidas.</CardText>
-					</CardService>
+				<CardService>
+					<DesignIdeas />
+					<h3>UX/UI</h3>
+					<p>Criação de design web responsivo, focado em usabilidade para prover a melhor experiência de usuário para gerar leads para seu produto.</p>
+				</CardService>
 
-					<CardService>
-						<div>
-							<DesignIdeas />
-							<TitleH3>UX/UI</TitleH3>
-						</div>
-						<CardText>Criação de design web responsivo, focado em usabilidade para prover a melhor experiência de usuário para gerar leads para seu produto.</CardText>
-					</CardService>
+				<CardService>
+					<DesignServices />
+					<h3>BRANDING</h3>
+					<p>Ajudo você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</p>
+				</CardService>
 
-					<CardService>
-						<div>
-							<DesignServices />
-							<TitleH3>BRANDING</TitleH3>
-						</div>
-						<CardText>Ajudo você a posicionar sua marca da forma correta, potencializando resultados positivos através das boas práticas do marketing digital.</CardText>
-					</CardService>
-
-					<CardService>
-						<div>
-							<CodeBlock />
-							<TitleH3>DESENVOLVIMENTO</TitleH3>
-						</div>
-						<CardText>Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio.</CardText>
-					</CardService>
-				</ContainerGrid>
-			</ScrollAnimation>
-		</>
+				<CardService>
+					<CodeBlock />
+					<h3>DESENVOLVIMENTO</h3>
+					<p>Desenvolvimento de sistemas 100% personalizados que vão automatizar a administração do seu negócio.</p>
+				</CardService>
+			</ContainerGrid>
+		</ScrollAnimation>
 	);
 }
