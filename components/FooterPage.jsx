@@ -333,7 +333,7 @@ export default function FooterPage(props) {
 
 			<div id="grid">
 				<BrandFooterWrapper>
-					<FooterBrandTextTitle>Raven Marciano</FooterBrandTextTitle>
+					<FooterBrandTextTitle>John Wilson</FooterBrandTextTitle>
 					<span>{language.landingPage.resumeText}</span>
 					{/* <SocialNetworkRowStack /> */}
 				</BrandFooterWrapper>
@@ -408,7 +408,7 @@ export default function FooterPage(props) {
 			<ContainerBuildCopyright>
 				{/* <SocialNetworkRowStack /> */}
 
-				<span>© {new Date().getFullYear()} Raven Marciano. All rights reserved.</span>
+				<span>© {new Date().getFullYear()} John Wilson. All rights reserved.</span>
 				<div className="build-and-button-top">
 					<TextBuildProject>
 						{language.footer.labelBuildVersion}: {packageJson.version}

@@ -254,8 +254,8 @@ export default function HomePage() {
 				<ProgressBar color={theme.colors.branding} height={5} />
 				<Head
 					title="Programming projects portfolio"
-					metaDescription="Web portfolio of programming projects by Raven Marciano."
-					keywords="Raven Marciano, Programming, Portfolio, Developer, Fullstack Developer, Frontend Developer, Software developer, systems analyst, programming projects"
+					metaDescription="Web portfolio of programming projects by John Wilson."
+					keywords="John Wilson, Programming, Portfolio, Developer, Fullstack Developer, Frontend Developer, Software developer, systems analyst, programming projects"
 				/>
 				<LandingPageContainer>
 					<TitleLandingContainer>
