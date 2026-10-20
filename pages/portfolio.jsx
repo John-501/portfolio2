@@ -363,7 +363,7 @@ export default function Portifolio() {
 						<Mongodb />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/raven-501/Be_the_hero.git",
+				sourceCodeLink: "https://github.com/John-501/Be_the_hero.git",
 				typeProject: ["WEB", "MOBILE"],
 			},
 			{
@@ -398,7 +398,7 @@ export default function Portifolio() {
 						<Sqlite />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/raven-501/mobile_plantmanager.git",
+				sourceCodeLink: "https://github.com/John-501/mobile_plantmanager.git",
 				typeProject: ["BACKEND", "WEB", "MOBILE"],
 			},
 
@@ -553,7 +553,7 @@ export default function Portifolio() {
 			// 			<LogoVercel />
 			// 		</Tooltip>,
 			// 	],
-			// 	sourceCodeLink: "https://github.com/raven-501/next16.git",
+			// 	sourceCodeLink: "https://github.com/John-501/next16.git",
 			// 	typeProject: ["WEB"],
 			// },
 			// {

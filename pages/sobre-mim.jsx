@@ -13,7 +13,7 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import TitleSection from "@/components/TitleSection";
 
 //PDFs
-import Raven from "../public/pdf/Raven.pdf";
+import John from "../public/pdf/John Wilson.pdf";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -279,8 +279,8 @@ export default function SobreMim(props) {
 
 	const handleDownload = () => {
 		const link = document.createElement("a");
-		link.href = Raven;
-		link.download = "Raven_full_stack.pdf"; // Nome do arquivo baixado
+		link.href = John;
+		link.download = "John_Wilson_full_stack.pdf"; // Nome do arquivo baixado
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);

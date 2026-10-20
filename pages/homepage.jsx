@@ -20,8 +20,8 @@ import { FluidContainer } from "@/styles/ui";
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
-//Arquivo Raven
-import Raven from "../public/pdf/Raven.pdf";
+//Arquivo John
+import John from "../public/pdf/John Wilson.pdf";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -240,8 +240,8 @@ export default function HomePage() {
 
 	const handleDownload = () => {
 		const link = document.createElement("a");
-		link.href = Raven;
-		link.download = "Raven_full_stack.pdf";
+		link.href = John;
+		link.download = "John_Wilson_full_stack.pdf";
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
