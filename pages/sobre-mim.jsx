@@ -13,7 +13,7 @@ import SocialNetworkRowStack from "@/components/SocialNetworkRowStack";
 import TitleSection from "@/components/TitleSection";
 
 //PDFs
-import curriculo from "../public/pdf/curriculo.pdf";
+import Raven from "../public/pdf/Raven.pdf";
 
 const WrapperAboutMe = styled.div`
 	display: flex;
@@ -279,8 +279,8 @@ export default function SobreMim(props) {
 
 	const handleDownload = () => {
 		const link = document.createElement("a");
-		link.href = curriculo;
-		link.download = "curriculo_glayson_visgueira.pdf"; // Nome do arquivo baixado
+		link.href = Raven;
+		link.download = "Raven_full_stack.pdf"; // Nome do arquivo baixado
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
@@ -290,7 +290,7 @@ export default function SobreMim(props) {
 		<SectionSobreMim id="section-sobre-mim">
 			<WrapperAboutMe>
 				<div className="container">
-					<div className="left-view">
+					{/* <div className="left-view">
 						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
 							<GithubStatsCard>
 								<div className="background" />
@@ -320,16 +320,16 @@ export default function SobreMim(props) {
 								</div>
 							</GithubStatsCard>
 						</ScrollAnimation>
-					</div>
-					<div className="right-view">
-						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200}>
+					</div> */}
+					<div className="right-view" style={{ "width": "100%" }}>
+						<ScrollAnimation animateIn="fadeIn" animateOnce delay={200} style={{ "width": "100%" }}>
 							{/* <h3>{language.aboutMePage.title}</h3> */}
-							<TitleSection title={language.aboutMePage.title} alignTitle="left" />
+							<TitleSection title={language.aboutMePage.title} alignTitle="center" />
 							<p>{language.aboutMePage.paragraph_one}</p>
 							<p>{language.aboutMePage.paragraph_two}</p>
 							<p>{language.aboutMePage.paragraph_three}</p>
-							<div className="tech-and-cv">
-								<SocialNetworkRowStack />
+							<div className="tech-and-cv flex justify-center w-full">
+								{/* <SocialNetworkRowStack /> */}
 								<ButtonCV onClick={handleDownload} data-splitbee-event="Download CV">
 									Download CV
 								</ButtonCV>

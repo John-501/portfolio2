@@ -20,8 +20,8 @@ import { FluidContainer } from "@/styles/ui";
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
 
-//Arquivo curriculo
-import curriculo from "../public/pdf/curriculo.pdf";
+//Arquivo Raven
+import Raven from "../public/pdf/Raven.pdf";
 
 const LandingPageContainer = styled.div`
 	display: flex;
@@ -240,8 +240,8 @@ export default function HomePage() {
 
 	const handleDownload = () => {
 		const link = document.createElement("a");
-		link.href = curriculo;
-		link.download = "curriculo_glayson_visgueira.pdf";
+		link.href = Raven;
+		link.download = "Raven_full_stack.pdf";
 		document.body.appendChild(link);
 		link.click();
 		document.body.removeChild(link);
@@ -253,9 +253,9 @@ export default function HomePage() {
 				<FloatNavigationBar />
 				<ProgressBar color={theme.colors.branding} height={5} />
 				<Head
-					title="Portfólio de projetos de programação"
-					metaDescription="Web portifólio de projetos de programação do Dev Glayson Visgueira."
-					keywords="Glayson Visgueira, Glayson, Visgueira, Programação, Portifólio, Dev, Programador, Developer, Desenvolvedor de software, analista de sistemas, programador fullstack, desenvolvedor frontend"
+					title="Programming projects portfolio"
+					metaDescription="Web portfolio of programming projects by Raven Marciano."
+					keywords="Raven Marciano, Programming, Portfolio, Developer, Fullstack Developer, Frontend Developer, Software developer, systems analyst, programming projects"
 				/>
 				<LandingPageContainer>
 					<TitleLandingContainer>

@@ -27,11 +27,12 @@ import { Typescript } from "@styled-icons/simple-icons/Typescript";
 import { Sass } from "@styled-icons/fa-brands/Sass";
 import { Expo } from "@styled-icons/simple-icons/Expo";
 import { Jest } from "@styled-icons/simple-icons/Jest";
-// import { Leaflet } from "@styled-icons/simple-icons/Leaflet";
-// import { Express } from "@styled-icons/simple-icons/Express";
-// import { Flutter } from "@styled-icons/boxicons-logos/Flutter";
+import { Vuedotjs } from "@styled-icons/simple-icons/Vuedotjs";
+import { Nuxtdotjs } from "@styled-icons/simple-icons/Nuxtdotjs";
+
+import { Tailwindcss } from "@styled-icons/simple-icons/Tailwindcss";
+import { Vercel } from "@styled-icons/simple-icons/Vercel";
 import { Filter } from "@styled-icons/fa-solid/Filter";
-import { Svelte } from "@styled-icons/simple-icons/Svelte";
 
 //Custom components
 import Tooltip from "@/components/Tooltip";
@@ -242,38 +243,14 @@ export default function Portifolio() {
 	const projects = useMemo(
 		() => [
 			{
-				id: 24,
-				title: language.portifolioPage.projects.id_24.title,
-				description: language.portifolioPage.projects.id_24.description,
-				liveDemoUrl: null,
-				imageSourcePath: null,
+				id: 20,
+				title: language.portifolioPage.projects.id_20.title,
+				description: language.portifolioPage.projects.id_20.description,
+				liveDemoUrl: "	https://www.swpmanagement.co.uk/",
+				imageSourcePath: "/img/portfolio-projects/Snow-white.png",
 				techs: [
-					<Tooltip toolTipText="React.JS">
+					<Tooltip toolTipText="React">
 						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Javascript">
-						<Javascript />
-					</Tooltip>,
-				],
-				sourceCodeLink: null,
-				typeProject: ["MOBILE"],
-				created_at: "29/08/2024",
-			},
-			{
-				id: 23,
-				title: language.portifolioPage.projects.id_23.title,
-				description: language.portifolioPage.projects.id_23.description,
-				liveDemoUrl: "https://www.prodosdigital.com.br/",
-				imageSourcePath: "/img/portfolio-projects/prodos-digital.png",
-				techs: [
-					<Tooltip toolTipText="React.JS">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Next.JS">
-						<Nextdotjs />
-					</Tooltip>,
-					<Tooltip toolTipText="Sass">
-						<Sass />
 					</Tooltip>,
 					<Tooltip toolTipText="Javascript">
 						<Javascript />
@@ -281,25 +258,84 @@ export default function Portifolio() {
 				],
 				sourceCodeLink: null,
 				typeProject: ["WEB"],
-				created_at: "12/12/2024",
 			},
+
 			{
-				id: 1,
-				title: language.portifolioPage.projects.id_1.title,
-				description: language.portifolioPage.projects.id_1.description,
-				liveDemoUrl: null,
-				imageSourcePath: null,
+				id: 21,
+				title: language.portifolioPage.projects.id_21.title,
+				description: language.portifolioPage.projects.id_21.description,
+				liveDemoUrl: "https://marketpro-live.netlify.app/",
+				imageSourcePath: "/img/portfolio-projects/Marketpro.PNG",
 				techs: [
-					<Tooltip toolTipText="Java">
-						<Java />
+					<Tooltip toolTipText="Vue.JS">
+						<Vuedotjs />
 					</Tooltip>,
-					<Tooltip toolTipText="SEO">
-						<Robot />
+					<Tooltip toolTipText="Nuxt.JS">
+						<Nuxtdotjs />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/jfuzzylogic_irrigador",
-				typeProject: ["BACKEND"],
-				created_at: "09/06/2019",
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
+			},
+			{
+				id: 24,
+				title: language.portifolioPage.projects.id_24.title,
+				description: language.portifolioPage.projects.id_24.description,
+				liveDemoUrl: "https://www.dorchestercollection.com/ascot/coworth-park/whats-on																																																																						",
+				imageSourcePath: "/img/portfolio-projects/hotel.png",
+				techs: [
+					<Tooltip toolTipText="Vue.JS">
+						<Vuedotjs />
+					</Tooltip>,
+					<Tooltip toolTipText="Nuxt.JS">
+						<Nuxtdotjs />
+					</Tooltip>,
+					<Tooltip toolTipText="Tailwind CSS">
+						<Tailwindcss />
+					</Tooltip>
+				],
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
+			},
+
+			{
+				id: 23,
+				title: language.portifolioPage.projects.id_23.title,
+				description: language.portifolioPage.projects.id_23.description,
+				liveDemoUrl: "https://sushitimetr.com/",
+				imageSourcePath: "/img/portfolio-projects/restaurant.png",
+				techs: [
+					<Tooltip toolTipText="React.JS">
+						<ReactLogo />
+					</Tooltip>,
+
+					<Tooltip toolTipText="Vercel">
+						<Vercel />
+					</Tooltip>,
+				],
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
+			},
+
+			{
+				id: 4,
+				title: language.portifolioPage.projects.id_4.title,
+				description: language.portifolioPage.projects.id_4.description,
+				liveDemoUrl: "https://www.patternbrands.com/",
+				imageSourcePath: "/img/portfolio-projects/pattern.png",
+				techs: [
+					<Tooltip toolTipText="Next.js">
+						<Nextdotjs />
+					</Tooltip>,
+					<Tooltip toolTipText="Tailwind CSS">
+						<Tailwindcss />
+					</Tooltip>,
+					<Tooltip toolTipText="Typescript">
+						<Typescript />
+					</Tooltip>,
+				],
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
 			},
 			{
 				id: 2,
@@ -327,9 +363,8 @@ export default function Portifolio() {
 						<Mongodb />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/DevRadar",
-				typeProject: ["BACKEND", "WEB", "MOBILE"],
-				created_at: "02/02/2020",
+				sourceCodeLink: "https://github.com/raven-501/Be_the_hero.git",
+				typeProject: ["WEB", "MOBILE"],
 			},
 			{
 				id: 3,
@@ -363,28 +398,10 @@ export default function Portifolio() {
 						<Sqlite />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/be-the-hero",
+				sourceCodeLink: "https://github.com/raven-501/mobile_plantmanager.git",
 				typeProject: ["BACKEND", "WEB", "MOBILE"],
-				created_at: "26/04/2020",
 			},
-			// {
-			// 	id: 4,
-			// 	title: language.portifolioPage.projects.id_4.title,
-			// 	description: language.portifolioPage.projects.id_4.description,
-			// 	liveDemoUrl: null,
-			// 	imageSourcePath: null,
-			// 	techs: [
-			// 		<Tooltip toolTipText="NodeJS">
-			// 			<Nodejs />
-			// 		</Tooltip>,
-			// 		<Tooltip toolTipText="Javascript">
-			// 			<Javascript />
-			// 		</Tooltip>,
-			// 	],
-			// 	sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegra-nodejs",
-			// 	typeProject: ["BACKEND"],
-			// 	created_at: "04/04/2020",
-			// },
+
 			{
 				id: 5,
 				title: language.portifolioPage.projects.id_5.title,
@@ -408,31 +425,30 @@ export default function Portifolio() {
 						<Firebase />
 					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/letmeask-NLW06",
+				sourceCodeLink: null,
 				typeProject: ["WEB", "MOBILE"],
 				created_at: "24/06/2021",
 			},
-			{
-				id: 6,
-				title: language.portifolioPage.projects.id_6.title,
-				description: language.portifolioPage.projects.id_6.description,
-				liveDemoUrl: null,
-				imageSourcePath: "/img/portfolio-projects/plantmanager.png",
-				techs: [
-					<Tooltip toolTipText="ReactJS">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Typescript">
-						<Typescript />
-					</Tooltip>,
-					<Tooltip toolTipText="SqLite">
-						<Sqlite />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
-				typeProject: ["MOBILE"],
-				created_at: "19/04/2021",
-			},
+			// {
+			// 	id: 6,
+			// 	title: language.portifolioPage.projects.id_6.title,
+			// 	description: language.portifolioPage.projects.id_6.description,
+			// 	liveDemoUrl: null,
+			// 	imageSourcePath: "/img/portfolio-projects/plantmanager.png",
+			// 	techs: [
+			// 		<Tooltip toolTipText="ReactJS">
+			// 			<ReactLogo />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Typescript">
+			// 			<Typescript />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="SqLite">
+			// 			<Sqlite />
+			// 		</Tooltip>,
+			// 	],
+			// 	sourceCodeLink: "https://github.com/Glaysonvisgueira/plantmanager",
+			// 	typeProject: ["MOBILE"],
+			// },
 			// {
 			// 	id: 7,
 			// 	title: language.portifolioPage.projects.id_7.title,
@@ -481,27 +497,27 @@ export default function Portifolio() {
 			// 	typeProject: ["BACKEND"],
 			// 	created_at: "27/11/2020",
 			// },
-			{
-				id: 9,
-				title: language.portifolioPage.projects.id_9.title,
-				description: language.portifolioPage.projects.id_9.description,
-				liveDemoUrl: null,
-				imageSourcePath: null,
-				techs: [
-					<Tooltip toolTipText="ReactJS">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Expo">
-						<Expo />
-					</Tooltip>,
-					<Tooltip toolTipText="Javascript">
-						<Javascript />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
-				typeProject: ["MOBILE", "BACKEND"],
-				created_at: "05/05/2020",
-			},
+			// {
+			// 	id: 9,
+			// 	title: language.portifolioPage.projects.id_9.title,
+			// 	description: language.portifolioPage.projects.id_9.description,
+			// 	liveDemoUrl: null,
+			// 	imageSourcePath: null,
+			// 	techs: [
+			// 		<Tooltip toolTipText="ReactJS">
+			// 			<ReactLogo />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Expo">
+			// 			<Expo />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Javascript">
+			// 			<Javascript />
+			// 		</Tooltip>,
+			// 	],
+			// 	sourceCodeLink: "https://github.com/Glaysonvisgueira/inthegre-se",
+			// 	typeProject: ["MOBILE", "BACKEND"],
+			// 	created_at: "05/05/2020",
+			// },
 			// {
 			// 	id: 10,
 			// 	title: language.portifolioPage.projects.id_10.title,
@@ -517,30 +533,29 @@ export default function Portifolio() {
 			// 	typeProject: ["BACKEND"],
 			// 	created_at: "16/06/2019",
 			// },
-			{
-				id: 11,
-				title: language.portifolioPage.projects.id_11.title,
-				description: language.portifolioPage.projects.id_11.description,
-				liveDemoUrl: "https://glaysonvisgueira.vercel.app/",
-				imageSourcePath: "/img/portfolio-projects/portfolio-page.png",
-				techs: [
-					<Tooltip toolTipText="ReactJS">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="NextJS">
-						<Nextdotjs />
-					</Tooltip>,
-					<Tooltip toolTipText="Styled Components">
-						<Styledcomponents />
-					</Tooltip>,
-					<Tooltip toolTipText="Vercel">
-						<LogoVercel />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js",
-				typeProject: ["WEB"],
-				created_at: "10/06/2022",
-			},
+			// {
+			// 	id: 11,
+			// 	title: language.portifolioPage.projects.id_11.title,
+			// 	description: language.portifolioPage.projects.id_11.description,
+			// 	liveDemoUrl: "https://glaysonvisgueira.vercel.app/",
+			// 	imageSourcePath: "/img/portfolio-projects/portfolio.png",
+			// 	techs: [
+			// 		<Tooltip toolTipText="ReactJS">
+			// 			<ReactLogo />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="NextJS">
+			// 			<Nextdotjs />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Styled Components">
+			// 			<Styledcomponents />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Vercel">
+			// 			<LogoVercel />
+			// 		</Tooltip>,
+			// 	],
+			// 	sourceCodeLink: "https://github.com/raven-501/next16.git",
+			// 	typeProject: ["WEB"],
+			// },
 			// {
 			// 	id: 12,
 			// 	title: language.portifolioPage.projects.id_12.title,
@@ -602,71 +617,36 @@ export default function Portifolio() {
 				id: 15,
 				title: language.portifolioPage.projects.id_15.title,
 				description: language.portifolioPage.projects.id_15.description,
-				liveDemoUrl: "https://calculadora-svelte-liart.vercel.app/",
-				imageSourcePath: "/img/portfolio-projects/svelt-calculadora.png",
+				liveDemoUrl: "https://www.carelappy.com/laptop-repair-noida",
+				imageSourcePath: "/img/portfolio-projects/computer-reparing.png",
 				techs: [
-					<Tooltip toolTipText="Svelte">
-						<Svelte />
-					</Tooltip>,
-					<Tooltip toolTipText="Typescript">
-						<Typescript />
-					</Tooltip>,
-					<Tooltip toolTipText="Html">
-						<Html5 />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/svelte-calculadora",
-				typeProject: ["WEB"],
-				created_at: "28/01/2023",
-			},
-			{
-				id: 16,
-				title: language.portifolioPage.projects.id_16.title,
-				description: language.portifolioPage.projects.id_16.description,
-				liveDemoUrl: "https://layout-mui-boilerplate.vercel.app/dashboards",
-				imageSourcePath: "/img/portfolio-projects/mui-v5-layout-dashboard.png",
-				techs: [
-					<Tooltip toolTipText="React.JS">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Next.JS">
+					<Tooltip toolTipText="Nex.JS">
 						<Nextdotjs />
 					</Tooltip>,
+					<Tooltip toolTipText="Vercel">
+						<Vercel />
+					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/layout-mui-boilerplate",
+				sourceCodeLink: null,
 				typeProject: ["WEB"],
-				created_at: "28/01/2023",
 			},
-			{
-				id: 17,
-				title: language.portifolioPage.projects.id_17.title,
-				description: language.portifolioPage.projects.id_17.description,
-				liveDemoUrl: null,
-				imageSourcePath: null,
-				techs: [
-					<Tooltip toolTipText="React Native">
-						<ReactLogo />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/rnmaps",
-				typeProject: ["MOBILE"],
-				created_at: "27/03/2023",
-			},
-			{
-				id: 18,
-				title: language.portifolioPage.projects.id_18.title,
-				description: language.portifolioPage.projects.id_18.description,
-				liveDemoUrl: null,
-				imageSourcePath: null,
-				techs: [
-					<Tooltip toolTipText="React Native">
-						<ReactLogo />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/rn-ecommerce-ui",
-				typeProject: ["MOBILE"],
-				created_at: "10/04/2023",
-			},
+			// {
+			// 	id: 16,
+			// 	title: language.portifolioPage.projects.id_16.title,
+			// 	description: language.portifolioPage.projects.id_16.description,
+			// 	liveDemoUrl: "https://layout-mui-boilerplate.vercel.app/dashboards",
+			// 	imageSourcePath: "/img/portfolio-projects/mui-v5-layout-dashboard.png",
+			// 	techs: [
+			// 		<Tooltip toolTipText="React.JS">
+			// 			<ReactLogo />
+			// 		</Tooltip>,
+			// 		<Tooltip toolTipText="Next.JS">
+			// 			<Nextdotjs />
+			// 		</Tooltip>,
+			// 	],
+			// 	sourceCodeLink: "https://github.com/Glaysonvisgueira/layout-mui-boilerplate",
+			// 	typeProject: ["WEB"],
+			// },
 			// {
 			// 	id: 19,
 			// 	title: language.portifolioPage.projects.id_19.title,
@@ -689,59 +669,39 @@ export default function Portifolio() {
 			// 	created_at: "27/03/2023",
 			// },
 			{
-				id: 20,
-				title: language.portifolioPage.projects.id_20.title,
-				description: language.portifolioPage.projects.id_20.description,
-				liveDemoUrl: "https://material-ui-v6-dashboards-test.vercel.app/",
-				imageSourcePath: "/img/portfolio-projects/mui-v6-layout-dashboard.png",
+				id: 1,
+				title: language.portifolioPage.projects.id_1.title,
+				description: language.portifolioPage.projects.id_1.description,
+				liveDemoUrl: "https://www.ncoffee.pl/",
+				imageSourcePath: "/img/portfolio-projects/coffee.png",
 				techs: [
-					<Tooltip toolTipText="React">
+					<Tooltip toolTipText="Next.JS">
+						<Nextdotjs />
+					</Tooltip>,
+					<Tooltip toolTipText="React.JS">
 						<ReactLogo />
 					</Tooltip>,
-					<Tooltip toolTipText="Javascript">
-						<Javascript />
-					</Tooltip>,
 				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/material-ui-v6-dashboards-test",
-				typeProject: ["FRONTEND"],
-				created_at: "03/10/2024",
-			},
-			{
-				id: 21,
-				title: language.portifolioPage.projects.id_21.title,
-				description: language.portifolioPage.projects.id_21.description,
-				liveDemoUrl: "https://state-management-jotai-vs-zustand.vercel.app",
-				imageSourcePath: "/img/portfolio-projects/state-management.png",
-				techs: [
-					<Tooltip toolTipText="React">
-						<ReactLogo />
-					</Tooltip>,
-					<Tooltip toolTipText="Javascript">
-						<Javascript />
-					</Tooltip>,
-				],
-				sourceCodeLink: "https://github.com/Glaysonvisgueira/state-management-jotai-vs-zustand",
-				typeProject: ["FRONTEND"],
-				created_at: "25/07/2023",
+				sourceCodeLink: null,
+				typeProject: ["WEB"],
 			},
 
 			{
 				id: 22,
 				title: language.portifolioPage.projects.id_22.title,
 				description: language.portifolioPage.projects.id_22.description,
-				liveDemoUrl: "https://www.cedulapromotora.com.br",
-				imageSourcePath: "/img/portfolio-projects/landing-cedula-promotora.png",
+				liveDemoUrl: "https://www.platum.com/en",
+				imageSourcePath: "/img/portfolio-projects/E-bike.png",
 				techs: [
 					<Tooltip toolTipText="React">
 						<ReactLogo />
 					</Tooltip>,
-					<Tooltip toolTipText="Javascript">
-						<Javascript />
+					<Tooltip toolTipText="Tailwind CSS">
+						<Tailwindcss />
 					</Tooltip>,
 				],
 				sourceCodeLink: null,
-				typeProject: ["FRONTEND"],
-				created_at: "01/09/2024",
+				typeProject: ["WEB"],
 			},
 		],
 		[]
@@ -822,7 +782,7 @@ export default function Portifolio() {
 				<ModalContent>
 					<h2>{selectedProject?.title}</h2>
 					<p>{selectedProject?.description}</p>
-					<CloseButton onClick={handleCloseModal}>Fechar</CloseButton>
+					<CloseButton onClick={handleCloseModal}>Close</CloseButton>
 				</ModalContent>
 			</Modal>
 		</SectionPortifolio>

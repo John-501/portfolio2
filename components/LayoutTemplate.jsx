@@ -5,10 +5,6 @@ import Link from "next/link";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 
-//Custom components
-import SwitchThemeButton from "@/components/SwitchThemeButton";
-import LanguageSwitchButton from "@/components/LanguageSwitchButton";
-
 //Context
 import { SettingsContext } from "@/context/SettingsContext";
 
@@ -93,24 +89,15 @@ const NavbarOptionContainer = styled.nav`
 		align-items: center;
 		justify-content: center;
 
-		&:hover h4:not(:hover) {
+		&:hover h4:not(:hover),
+		&:hover a:not(:hover) {
 			opacity: 0.3;
 		}
 	}
 `;
 
-const SwitchMenuContainer = styled.div`
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-right: 20px;
-
-	@media (min-width: 601px) {
-		display: none;
-	}
-`;
-
 const NavbarOption = styled.h4`
+	display: block;
 	color: ${(props) => props.theme.colors.title};
 	font-weight: 800;
 	margin-left: 5px;
@@ -166,7 +153,7 @@ export default function LayoutTemplate({ children }) {
 					<Link href="#section-home" passHref>
 						<LogoContainer>
 							<LogoText>
-								<CaracteresLogo>&lt;</CaracteresLogo>GV <CaracteresLogo>/&gt;</CaracteresLogo>
+								<CaracteresLogo>&lt;</CaracteresLogo> RM <CaracteresLogo>/&gt;</CaracteresLogo>
 							</LogoText>
 						</LogoContainer>
 					</Link>
@@ -201,17 +188,22 @@ export default function LayoutTemplate({ children }) {
 								<NavbarOption>{language.navbarMenu.labelExperience}</NavbarOption>
 							</Link>
 						</Fade>
+						<Fade top delay={500} duration={200}>
+							<NavbarOption
+								as="a"
+								href="#section-contact"
+								onClick={(event) => {
+									event.preventDefault();
+									document.getElementById("section-contact")?.scrollIntoView({
+										behavior: "smooth",
+										block: "start",
+									});
+								}}>
+								{language.navbarMenu.labelContact}
+							</NavbarOption>
+						</Fade>
 					</div>
-					<Fade top delay={500} duration={200}>
-						<LanguageSwitchButton />
-						{/* <SwitchThemeButton /> */}
-					</Fade>
 				</NavbarOptionContainer>
-
-				<SwitchMenuContainer>
-					<LanguageSwitchButton />
-					{/* <SwitchThemeButton /> */}
-				</SwitchMenuContainer>
 			</HeaderContainer>
 
 			<Main>

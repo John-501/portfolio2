@@ -113,6 +113,22 @@ export default function FloatNavigationBar(props) {
 					<Timeline />
 				</NavOption>
 			</Link>
-		</NavigationBar>
+
+			<Link
+				href="#section-contact"
+				style={{ paddingBottom: "1px" }}
+				onClick={(event) => {
+					event.preventDefault();
+					setActive("#section-contact");
+					document.getElementById("section-contact")?.scrollIntoView({
+						behavior: "smooth",
+						block: "start",
+					});
+				}} passHref>
+				<NavOption className="button" isActive={active == "#section-contact" ? true : false}>
+					<Badge />
+				</NavOption>
+			</Link>
+		</NavigationBar >
 	);
 }

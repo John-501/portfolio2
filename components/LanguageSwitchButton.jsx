@@ -75,7 +75,7 @@ const LanguageWrapper = styled.div`
 
 export default function LanguageSwitchButton() {
 	const { changeLanguageLocalization } = useContext(SettingsContext);
-	const [checked, setChecked] = useState(false);
+	const [checked, setChecked] = useState(true);
 
 	function handleCheckSwitch() {
 		setChecked((checked) => !checked);

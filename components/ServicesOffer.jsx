@@ -111,6 +111,7 @@ const CardService = styled.div`
 
 export default function ServicesOffer() {
 	const { language } = useContext(SettingsContext);
+	console.log("language", language)
 
 	return (
 		<FluidContainer id="section-services">

@@ -203,10 +203,6 @@ export default function CardProject({ title, description, typeProject, techs, cr
 						<span key={index}>{chip}</span>
 					))}
 				</div>
-
-				<span className="created-at">
-					{language.portifolioPage.createdLabel}: {createdAt}
-				</span>
 			</div>
 
 			<div className="hr" />

@@ -4,7 +4,7 @@ Adicionar sessão de testemunhos
 
 REALIZADO:
 alterar os subtitles das paginas
-Adicionar novo projeto aos cards (TDAH CLASS)
+Adicionar novo projeto aos cards (Dorchester Collection)
 home com novo estilo
 alterar versao
 clicar no card abre o modal

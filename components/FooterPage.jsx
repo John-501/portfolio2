@@ -1,7 +1,8 @@
-import React, { useState, useEffect, useContext } from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import ScrollAnimation from "react-animate-on-scroll";
+import packageJson from "../package.json";
 
 //Contexto
 import { SettingsContext } from "@/context/SettingsContext";
@@ -53,6 +54,41 @@ const Divider = styled.div`
 	width: 100%;
 	border-top: 1px solid ${(props) => props.theme.colors.backgroundSecondary};
 	margin-top: 20px;
+`;
+
+const ContactButtonWrapper = styled.div`
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	margin-top: 32px;
+`;
+
+const ContactSection = styled.section`
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding-top: 8px;
+`;
+
+const ContactButton = styled.a`
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 24px;
+	height: 46px;
+	border-radius: 6px;
+	background-color: ${(props) => props.theme.colors.branding};
+	color: ${(props) => props.theme.colors.background};
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	transition: all 0.2s ease;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 0.9;
+		transform: translateY(-1px);
+	}
 `;
 
 const SectionFooterMenu = styled.div`
@@ -281,18 +317,6 @@ const ButtonUpToTop = styled.div`
 
 export default function FooterPage(props) {
 	const { language } = useContext(SettingsContext);
-	const [version, setVersion] = useState("");
-
-	useEffect(() => {
-		const fetchVersion = async () => {
-			const response = await fetch("https://api.github.com/repos/Glaysonvisgueira/glaysonvisgueira_next-js/contents/package.json");
-			const data = await response.json();
-			const packageJson = JSON.parse(Buffer.from(data.content, "base64").toString("utf-8")); // Decodifica o conteúdo base64
-			setVersion(packageJson.version);
-		};
-
-		fetchVersion();
-	}, []);
 
 	const goToTop = () => {
 		window.scrollTo({
@@ -303,11 +327,15 @@ export default function FooterPage(props) {
 
 	return (
 		<FooterContainer>
+			{/* <ContactButtonWrapper>
+				<ContactButton href="#section-contact">NCOFFEE SHOP</ContactButton>
+			</ContactButtonWrapper> */}
+
 			<div id="grid">
 				<BrandFooterWrapper>
-					<FooterBrandTextTitle>GLAYSON VISGUEIRA</FooterBrandTextTitle>
+					<FooterBrandTextTitle>Raven Marciano</FooterBrandTextTitle>
 					<span>{language.landingPage.resumeText}</span>
-					<SocialNetworkRowStack />
+					{/* <SocialNetworkRowStack /> */}
 				</BrandFooterWrapper>
 
 				<ScrollAnimation animateIn="fadeIn" animateOnce>
@@ -334,7 +362,7 @@ export default function FooterPage(props) {
 				<ScrollAnimation animateIn="fadeIn" animateOnce delay={400}>
 					<SectionFooterMenu>
 						<FooterTextTitle>{language.footer.labelSourceCode.title}</FooterTextTitle>
-						<FooterTextExternalLink href="https://github.com/Glaysonvisgueira/glaysonvisgueira_next-js" target="_blank">
+						<FooterTextExternalLink href="https://github.com/raven-501" target="_blank">
 							Github
 						</FooterTextExternalLink>
 					</SectionFooterMenu>
@@ -371,14 +399,19 @@ export default function FooterPage(props) {
 					</SectionFooterMenu>
 				</ScrollAnimation>
 			</div>
+			<ContactSection id="section-contact">
+				<ContactButton href="mailto:glaysonwow@gmail.com?subject=Project%20Inquiry" target="_blank">
+					CONTACT ME
+				</ContactButton>
+			</ContactSection>
 			<Divider />
 			<ContainerBuildCopyright>
 				{/* <SocialNetworkRowStack /> */}
 
-				<span>© {new Date().getFullYear()} Glayson Visgueira. Todos os direitos reservados.</span>
+				<span>© {new Date().getFullYear()} Raven Marciano. All rights reserved.</span>
 				<div className="build-and-button-top">
 					<TextBuildProject>
-						{language.footer.labelBuildVersion}: {version || ""}
+						{language.footer.labelBuildVersion}: {packageJson.version}
 					</TextBuildProject>
 					<ButtonUpToTop onClick={goToTop}>
 						<KeyboardArrowUp />
