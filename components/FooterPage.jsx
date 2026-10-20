@@ -400,7 +400,7 @@ export default function FooterPage(props) {
 				</ScrollAnimation>
 			</div>
 			<ContactSection id="section-contact">
-				<ContactButton href="mailto:glaysonwow@gmail.com?subject=Project%20Inquiry" target="_blank">
+				<ContactButton href="mailto:tim180646@gmail.com?subject=Project%20Inquiry" target="_blank">
 					CONTACT ME
 				</ContactButton>
 			</ContactSection>
