@@ -303,7 +303,7 @@ export default function Portifolio() {
 				title: language.portifolioPage.projects.id_23.title,
 				description: language.portifolioPage.projects.id_23.description,
 				liveDemoUrl: "https://sushitimetr.com/",
-				imageSourcePath: "/img/portfolio-projects/restaurant.png",
+				imageSourcePath: "/img/portfolio-projects/Restaurant.png",
 				techs: [
 					<Tooltip toolTipText="React.JS">
 						<ReactLogo />
@@ -322,7 +322,7 @@ export default function Portifolio() {
 				title: language.portifolioPage.projects.id_4.title,
 				description: language.portifolioPage.projects.id_4.description,
 				liveDemoUrl: "https://www.patternbrands.com/",
-				imageSourcePath: "/img/portfolio-projects/pattern.png",
+				imageSourcePath: "/img/portfolio-projects/pattern.PNG",
 				techs: [
 					<Tooltip toolTipText="Next.js">
 						<Nextdotjs />
@@ -538,7 +538,7 @@ export default function Portifolio() {
 			// 	title: language.portifolioPage.projects.id_11.title,
 			// 	description: language.portifolioPage.projects.id_11.description,
 			// 	liveDemoUrl: "https://glaysonvisgueira.vercel.app/",
-			// 	imageSourcePath: "/img/portfolio-projects/portfolio.png",
+			// 	imageSourcePath: "/img/portfolio-projects/portfolio.PNG",
 			// 	techs: [
 			// 		<Tooltip toolTipText="ReactJS">
 			// 			<ReactLogo />
@@ -618,7 +618,7 @@ export default function Portifolio() {
 				title: language.portifolioPage.projects.id_15.title,
 				description: language.portifolioPage.projects.id_15.description,
 				liveDemoUrl: "https://www.carelappy.com/laptop-repair-noida",
-				imageSourcePath: "/img/portfolio-projects/computer-reparing.png",
+				imageSourcePath: "/img/portfolio-projects/computer-reparing.PNG",
 				techs: [
 					<Tooltip toolTipText="Nex.JS">
 						<Nextdotjs />
@@ -691,7 +691,7 @@ export default function Portifolio() {
 				title: language.portifolioPage.projects.id_22.title,
 				description: language.portifolioPage.projects.id_22.description,
 				liveDemoUrl: "https://www.platum.com/en",
-				imageSourcePath: "/img/portfolio-projects/E-bike.png",
+				imageSourcePath: "/img/portfolio-projects/E-bike.PNG",
 				techs: [
 					<Tooltip toolTipText="React">
 						<ReactLogo />
